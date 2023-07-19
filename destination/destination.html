@@ -16,17 +16,17 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles.css" />
-    <link rel="stylesheet" href="./crew.css" />
+    <link rel="stylesheet" href="./destination.css" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="../assets/favicon-32x32.png"
+      href="./assets/favicon-32x32.png"
     />
     <meta name="description" content="Frontend Mentor Space Challenge" />
     <title>Space tourism website</title>
   </head>
-  <body class="background_crew">
+  <body class="background_destination">
     <section class="container">
       <nav>
         <div class="nav_icon">
@@ -44,66 +44,68 @@
               <a href="../index.html"> <span class="bold">00</span> Home </a>
             </li>
             <li>
-              <a href="../destination/destination-moon.html">
+              <a class="current_tab" href="#">
                 <span class="bold">01</span> Destination
               </a>
             </li>
             <li>
-              <a class="current_tab" href="#">
+              <a href="../crew/crew.html">
                 <span class="bold">02</span> Crew
               </a>
             </li>
             <li>
-              <a href="../technology/technology-vehicle.html">
+              <a href="../technology/technology.html">
                 <span class="bold">03</span> Technology
               </a>
             </li>
           </ul>
         </div>
       </nav>
-      <div class="crew commander">
-        <div class="crew_text">
-          <div class="crew_title">
-            <p><span class="number">02</span> Meet your crew</p>
-          </div>
-          <div class="crew_rank">
-            <p>Commander</p>
-          </div>
-          <div class="crew_name">
-            <p>Douglas Hurley</p>
-          </div>
-          <div class="crew_txt">
-            <p>
-              Douglas Gerald Hurley is an American engineer, former Marine Corps
-              pilot and former NASA astronaut. He launched into space for the
-              third time as commander of Crew Dragon Demo-2.
-            </p>
-          </div>
-          <div class="crew_nav">
-            <ul class="crew_navigations">
-              <li class="current_crew">
-                <a href="#"><span></span></a>
-              </li>
+      <div class="destination">
+        <div class="destination_image">
+          <p class="destination_location">
+            <span class="number">01</span> Pick your destination
+          </p>
+          <img
+            id="destinationImage"
+            class="destination_img"
+            src=""
+            alt=""
+            width="445px"
+            height="445px"
+          />
+        </div>
+        <div class="destination_text">
+          <div class="destination_nav">
+            <ul class="destination_navigations">
               <li>
-                <a href="./crew-specialist.html"><span></span></a>
+                <a href="#">Moon</a>
               </li>
-              <li>
-                <a href="./crew-pilot.html"><span></span></a>
-              </li>
-              <li>
-                <a href="./crew-engineer.html"><span></span></a>
-              </li>
+              <li><a href="#">Mars</a></li>
+              <li><a href="#">Europa</a></li>
+              <li><a href="#">Titan</a></li>
             </ul>
           </div>
-        </div>
-        <div class="crew_image">
-          <img
-            src="../assets/crew/image-douglas-hurley.webp"
-            alt="image of commander"
-            height="700px"
-          />
+          <div class="destination_head">
+            <p id="destinationName"></p>
+          </div>
+          <div class="destination_txt">
+            <p id="destinationDescription" class="destination_t"></p>
+          </div>
+
+          <div class="destination_eta">
+            <div class="distance">
+              <p class="distance_text">Avg. distance</p>
+              <p id="destinationDistance" class="distance_number"></p>
+            </div>
+            <div class="eta">
+              <p class="eta_text">Est. travel time</p>
+              <p id="destinationTravelTime" class="eta_number"></p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+    <script type="module" src="./destination.js"></script>
   </body>
 </html>

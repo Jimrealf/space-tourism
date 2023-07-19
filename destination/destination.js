@@ -1,66 +1,65 @@
-// const fs = require("fs");
-// const filePath = "data.json";
-// const jsonData = fs.readFileSync(filePath, "utf-8");
-// const destinations = JSON.parse(jsonData);
-// console.log(destinations);
+// Function to update the page content based on the selected destination
+function updateDestinationContent(destination) {
+  document.getElementById("destinationName").textContent = destination.name;
+  document.getElementById("destinationDescription").textContent =
+    destination.description;
+  document.getElementById("destinationDistance").textContent =
+    destination.distance;
+  document.getElementById("destinationTravelTime").textContent =
+    destination.travel;
 
-import fs from "fs";
+  // Update the image
+  const destinationImage = document.getElementById("destinationImage");
+  destinationImage.src = destination.images.webp;
+  destinationImage.alt = "Image of " + destination.name;
+}
 
-const readDestinations = () => {
-  const filePath = "../data.json";
-  const data = fs.readFileSync(filePath, "utf-8");
-  const destinations = JSON.parse(data);
-  console.log(destinations);
-};
-readDestinations();
+// Function to handle the click event and update the content
+function handleDestinationClick(destinationIndex) {
+  const selectedDestination = destinationsData[destinationIndex];
+  updateDestinationContent(selectedDestination);
 
-// // Function to update the page content based on the selected destination
-// function updateDestinationContent(destination) {
-//   document.getElementById("destinationName").textContent = destination.name;
-//   document.getElementById("destinationDescription").textContent =
-//     destination.description;
-//   document.getElementById("destinationDistance").textContent =
-//     destination.distance;
-//   document.getElementById("destinationTravelTime").textContent =
-//     destination.travel;
+  // Remove the 'current_nav' class from all links
+  const destinationLinks = document.querySelectorAll(
+    ".destination_navigations a"
+  );
+  destinationLinks.forEach((link) => {
+    link.classList.remove("current_nav");
+  });
 
-//   // Update the image
-//   const destinationImage = document.getElementById("destinationImage");
-//   destinationImage.src = destination.images.webp;
-//   destinationImage.alt = "Image of " + destination.name;
-// }
+  // Add the 'current_nav' class to the clicked link
+  const clickedLink = destinationLinks[destinationIndex];
+  clickedLink.classList.add("current_nav");
+}
 
-// // Function to handle the click event and update the content
-// function handleDestinationClick(destinationIndex) {
-//   const selectedDestination = destinations.destinations[destinationIndex];
-//   updateDestinationContent(selectedDestination);
+let destinationsData; // Declare destinationsData variable outside the scope
 
-//   // Remove the 'current_nav' class from all links
-//   const destinationLinks = document.querySelectorAll(
-//     ".destination_navigations a"
-//   );
-//   destinationLinks.forEach((link) => {
-//     link.classList.remove("current_nav");
-//   });
+// Load initial destination data (Moon) when the page is loaded
+document.addEventListener("DOMContentLoaded", () => {
+  // Fetch the data from the JSON file
+  fetch("../data.json")
+    .then((response) => response.json())
+    .then((data) => {
+      // Use the fetched data and store it in the destinationsData variable
+      destinationsData = data.destinations;
+      const initialDestinationIndex = 0; // Index of the "Moon" destination in the destinations array
+      const initialDestination = destinationsData[initialDestinationIndex];
+      updateDestinationContent(initialDestination);
 
-//   // Add the 'current_nav' class to the clicked link
-//   const clickedLink = destinationLinks[destinationIndex];
-//   clickedLink.classList.add("current_nav");
-// }
+      const destinationLinks = document.querySelectorAll(
+        ".destination_navigations a"
+      );
+      destinationLinks.forEach((link, index) => {
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          handleDestinationClick(index);
+        });
+      });
 
-// // Load initial destination data (Moon) when the page is loaded
-// document.addEventListener("DOMContentLoaded", () => {
-//   const initialDestinationIndex = 0; // Index of the "Moon" destination in the destinations array
-//   const initialDestination = destinations.destinations[initialDestinationIndex];
-//   updateDestinationContent(initialDestination);
-
-//   const destinationLinks = document.querySelectorAll(
-//     ".destination_navigations a"
-//   );
-//   destinationLinks.forEach((link, index) => {
-//     link.addEventListener("click", (event) => {
-//       event.preventDefault();
-//       handleDestinationClick(index);
-//     });
-//   });
-// });
+      // Add the 'current_nav' class to the first navigation link (Moon)
+      destinationLinks[initialDestinationIndex].classList.add("current_nav");
+    })
+    .catch((error) => {
+      console.error("Error fetching data:", error);
+    });
+});

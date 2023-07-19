@@ -60,8 +60,9 @@
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.crew_navigations li.current_crew {
+.current_crew {
   background-color: #fff;
+  border-radius: 50%;
 }
 
 .crew_navigations li:not(.current_crew):hover {
@@ -74,5 +75,4 @@
 
 .crew_navigations li a span {
   padding-right: 1.5rem;
-  border-radius: 50%;
 }
