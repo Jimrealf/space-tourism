@@ -15,17 +15,18 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;300;400;500;700&family=Belanosima:wght@400;600;700&family=Bellefair&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="./technology.css" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/favicon-32x32.png"
+      href="../assets/favicon-32x32.png"
     />
     <meta name="description" content="Frontend Mentor Space Challenge" />
     <title>Space tourism website</title>
   </head>
-  <body class="background_crew">
+  <body class="background_technology">
     <section class="container">
       <nav>
         <div class="nav_icon">
@@ -40,20 +41,20 @@
         <div class="nav_options">
           <ul class="navigations">
             <li>
-              <a href="./index.html"> <span class="bold">00</span> Home </a>
+              <a href="../index.html"> <span class="bold">00</span> Home </a>
             </li>
             <li>
-              <a href="./destination-moon.html">
+              <a href="../destination/destination-moon.html">
                 <span class="bold">01</span> Destination
               </a>
             </li>
             <li>
-              <a class="current_tab" href="#">
+              <a href="../crew/crew-commander.html">
                 <span class="bold">02</span> Crew
               </a>
             </li>
             <li>
-              <a href="./technology-vehicle.html">
+              <a class="current_tab" href="#">
                 <span class="bold">03</span> Technology
               </a>
             </li>
@@ -61,47 +62,40 @@
         </div>
       </nav>
       <div>
-        <div class="crew specialist">
-          <div class="crew_text">
-            <div class="crew_title">
-              <p><span class="number">02</span> Meet your crew</p>
+        <div class="technology">
+          <div class="technology_body">
+            <div class="technology_title">
+              <p><span class="number">03</span> Space launch 101</p>
             </div>
-            <div class="crew_rank">
-              <p>Pilot</p>
-            </div>
-            <div class="crew_name">
-              <p>Victor Glover</p>
-            </div>
-            <div class="crew_txt">
-              <p>
-                Pilot on the first operational flight of the SpaceX Crew Dragon
-                to the International Space Station. Glover is a commander in the
-                U.S. Navy where he pilots an F/A-18.He was a crew member of
-                Expedition 64, and served as a station systems flight engineer.
-              </p>
-            </div>
-            <div class="crew_nav">
-              <ul class="crew_navigations">
-                <li>
-                  <a href="./crew-commander.html"><span></span></a>
-                </li>
-                <li>
-                  <a href="./crew-specialist.html"><span></span></a>
-                </li>
-                <li class="current_crew">
-                  <a href="#"><span></span></a>
-                </li>
-                <li>
-                  <a href="./crew-engineer.html"><span></span></a>
-                </li>
-              </ul>
+            <div class="technology_text">
+              <div class="technology_nav">
+                <a href="./technology-vehicle.html">1</a>
+                <a href="./technology-spaceport.html">2</a>
+                <a class="current_technology" href="#">3</a>
+              </div>
+              <div class="technology_txt">
+                <div class="technology_header">
+                  <p>The terminology...</p>
+                </div>
+                <div class="technology_channel">
+                  <p>Space capsule</p>
+                </div>
+                <div class="technology_normal">
+                  <p>
+                    A space capsule is an often-crewed spacecraft that uses a
+                    blunt-body reentry capsule to reenter the Earth's atmosphere
+                    without wings. Our capsule is where you'll spend your time
+                    during the flight. It includes a space gym, cinema, and
+                    plenty of other activities to keep you entertained.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="crew_image">
+          <div class="technology_image">
             <img
-              src="./assets/crew/image-victor-glover.webp"
-              alt="image of pilot"
-              height="700px"
+              src="../assets/technology/image-space-capsule-portrait.jpg"
+              alt="image of capsule"
             />
           </div>
         </div>

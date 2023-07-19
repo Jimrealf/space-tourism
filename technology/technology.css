@@ -1,0 +1,85 @@
+/***********Technology*****/
+
+.background_technology {
+  background-image: url("../assets/technology/background-technology-desktop.jpg");
+}
+
+.technology {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  max-width: 160rem;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: 12rem;
+  /* position: absolute;
+  right: 0; */
+}
+
+.technology_title {
+  margin-bottom: 16rem;
+}
+
+.technology_text {
+  display: flex;
+}
+
+.technology_header {
+  color: #d0d6f9;
+  font-size: 1.6rem;
+  letter-spacing: 0.27rem;
+  margin-bottom: 2.8rem;
+}
+
+.technology_channel {
+  color: #fff;
+  font-family: Bellefair;
+  font-size: 5.6rem;
+  margin-bottom: 3.8rem;
+}
+
+.technology_normal {
+  color: #d0d6f9;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  width: 40rem;
+}
+
+.technology_nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding-right: 8rem;
+  height: 29.6rem;
+}
+
+.technology_nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8.8rem;
+  height: 8.8rem;
+  border-radius: 50%;
+  color: #fff;
+  font-family: Bellefair;
+  font-size: 3.3rem;
+  letter-spacing: 0.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.technology_nav a.current_technology {
+  color: #0b0d17;
+  background-color: #fff;
+  border: 1px solid rgba(255, 255, 255);
+}
+
+.technology_nav a:not(.current_technology):hover {
+  border: 1px solid rgba(255, 255, 255);
+}
+
+.technology_image {
+  margin-top: 5rem;
+}

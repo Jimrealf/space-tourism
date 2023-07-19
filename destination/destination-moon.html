@@ -15,7 +15,8 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;300;400;500;700&family=Belanosima:wght@400;600;700&family=Bellefair&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="./destination.css" />
     <link
       rel="icon"
       type="image/png"
@@ -40,7 +41,7 @@
         <div class="nav_options">
           <ul class="navigations">
             <li>
-              <a href="./index.html"> <span class="bold">00</span> Home </a>
+              <a href="../index.html"> <span class="bold">00</span> Home </a>
             </li>
             <li>
               <a class="current_tab" href="#">
@@ -48,12 +49,12 @@
               </a>
             </li>
             <li>
-              <a href="./crew-commander.html">
+              <a href="../crew/crew-commander.html">
                 <span class="bold">02</span> Crew
               </a>
             </li>
             <li>
-              <a href="./technology-vehicle.html">
+              <a href="../technology/technology-vehicle.html">
                 <span class="bold">03</span> Technology
               </a>
             </li>
@@ -66,9 +67,10 @@
             <span class="number">01</span> Pick your destination
           </p>
           <img
+            id="destinationImage"
             class="destination_img"
-            src="./assets/destination/image-titan.webp"
-            alt="image of moon"
+            src=""
+            alt=""
             width="445px"
             height="445px"
           />
@@ -77,43 +79,33 @@
           <div class="destination_nav">
             <ul class="destination_navigations">
               <li>
-                <a href="./destination-moon.html">Moon</a>
+                <a href="#">Moon</a>
               </li>
-              <li>
-                <a href="./destination-mars.html">Mars</a>
-              </li>
-              <li>
-                <a href="./destination-europa.html">Europa</a>
-              </li>
-              <li>
-                <a class="current_nav" href="#">Titan</a>
-              </li>
+              <li><a href="#">Mars</a></li>
+              <li><a href="#">Europa</a></li>
+              <li><a href="#">Titan</a></li>
             </ul>
           </div>
           <div class="destination_head">
-            <p>Titan</p>
+            <p id="destinationName"></p>
           </div>
           <div class="destination_txt">
-            <p class="destination_t">
-              The only moon known to have a dense atmosphere other than Earth,
-              Titan is a home away from home (just a few hundred degrees
-              colder!). As a bonus, you get striking views of the Rings of
-              Saturn.
-            </p>
+            <p id="destinationDescription" class="destination_t"></p>
           </div>
 
           <div class="destination_eta">
             <div class="distance">
               <p class="distance_text">Avg. distance</p>
-              <p class="distance_number">1.6 bil. km</p>
+              <p id="destinationDistance" class="distance_number"></p>
             </div>
             <div class="eta">
               <p class="eta_text">Est. travel time</p>
-              <p class="eta_number">7 years</p>
+              <p id="destinationTravelTime" class="eta_number"></p>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <script type="module" src="./destination.js"></script>
   </body>
 </html>

@@ -1,0 +1,61 @@
+/**************Home*****/
+.background_home {
+  background-image: url("./assets/home/background-home-desktop.jpg");
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  max-width: 103rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20rem;
+}
+
+.explore {
+  width: 27.2rem;
+  height: 27.2rem;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.body_text {
+  width: 45rem;
+  /* height: 38.2rem; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+
+.body_header {
+  font-size: 2.8rem;
+  margin-bottom: 2.4rem;
+  color: #d0d6f9;
+  letter-spacing: 4.725px;
+}
+
+.space {
+  font-size: 15rem;
+  margin-bottom: 2.4rem;
+  font-family: Bellefair;
+}
+
+.explore_text {
+  color: #0b0d17;
+  font-size: 3.2rem;
+  font-family: Bellefair;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  padding: 12rem 6.1rem;
+  border-radius: 50%;
+}
+
+.body_normal {
+  font-size: 1.8rem;
+  color: #d0d6f9;
+  line-height: 3.2rem;
+}
