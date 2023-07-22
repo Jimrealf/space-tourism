@@ -85,3 +85,122 @@
   border-bottom: 3px solid #fff;
   padding-bottom: 1rem;
 }
+
+@media (max-width: 1024px) {
+  .background_destination {
+    background-image: url("../assets/destination/background-destination-tablet.jpg");
+  }
+
+  .destination {
+    flex-direction: column;
+    gap: 5rem;
+    margin-top: 4.6rem;
+    margin-bottom: 6.2rem;
+  }
+
+  .destination_text {
+    align-self: center;
+  }
+
+  .destination_image {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .destination_img {
+    padding-left: 0;
+    align-self: center;
+    width: 45.7rem;
+    height: 45.7rem;
+  }
+
+  .destination_text {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .destination_navigations {
+    margin-top: 1rem;
+    letter-spacing: 2.7px;
+  }
+
+  .destination_eta {
+    position: relative;
+    padding-top: 2.9rem;
+    display: flex;
+    gap: 7.9rem;
+  }
+
+  .distance {
+    padding-right: unset;
+  }
+
+  .eta {
+    padding-right: unset;
+  }
+
+  .destination_head {
+    font-size: 8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .destination_txt {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    padding-bottom: 4.9rem;
+  }
+
+  .distance_text,
+  .eta_text {
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+    letter-spacing: 2.362px;
+  }
+
+  .distance_number,
+  .eta_number {
+    font-size: 2.8rem;
+    font-family: Bellefair;
+  }
+}
+
+@media (max-width: 700px) {
+  .background_destination {
+    background-image: url("../assets/destination/background-destination-mobile.jpg");
+  }
+
+  .destination_eta {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  .destination_img {
+    width: 25.9rem;
+    height: 25.9rem;
+  }
+
+  .destination_navigations {
+    font-size: 1.4rem;
+    letter-spacing: 0.236rem;
+    padding-bottom: 3.1rem;
+  }
+
+  .destination_head {
+    font-size: 5.6rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .destination_txt {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    padding-bottom: 3.2rem;
+  }
+
+  .destination_location {
+    text-align: center;
+  }
+}

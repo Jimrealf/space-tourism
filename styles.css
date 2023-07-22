@@ -122,3 +122,137 @@ hr {
   letter-spacing: 4.725px;
   padding-right: 2.4rem;
 }
+
+.hamburger_menu {
+  display: none;
+  position: absolute;
+  right: 5.9rem;
+  top: 3.7rem;
+  cursor: pointer;
+}
+
+.menu_overlay {
+  position: fixed;
+  top: 0;
+  right: -60%;
+  width: 60%;
+  height: 100%;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.774227142333984px);
+  transition: right 0.3s ease;
+}
+
+.menu_overlay ul {
+  padding: 20px;
+  list-style: none;
+}
+
+.menu_overlay li {
+  margin-bottom: 10px;
+}
+
+.cancel_icon {
+  display: none;
+  position: absolute;
+  top: 3.7rem;
+  right: 5.9rem;
+  cursor: pointer;
+}
+
+.navigation {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  height: 9.6rem;
+  position: absolute;
+  letter-spacing: 2.7px;
+  top: 11.8rem;
+  left: 3.2rem;
+  font-size: 1.6rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+@media (min-width: 700px) and (max-width: 1024px) {
+  hr {
+    display: none;
+  }
+
+  .navigations {
+    width: 45rem;
+    padding-left: 4.8rem;
+    padding-right: 4.8rem;
+    letter-spacing: 2.4px;
+    top: 0;
+    right: 0;
+    font-size: 1.4rem;
+  }
+
+  .bold {
+    display: none;
+  }
+
+  .nav_icon {
+    position: absolute;
+    left: 4.9rem;
+    top: 2.4rem;
+  }
+
+  .destination_location,
+  .crew_title,
+  .technology_title {
+    font-size: 2rem;
+    letter-spacing: 3.375px;
+  }
+
+  .number {
+    font-weight: bold;
+    opacity: 0.25;
+    letter-spacing: 4.725px;
+    padding-right: 1.9rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav_options {
+    display: none;
+  }
+
+  .destination_location,
+  .crew_title,
+  .technology_title {
+    font-size: 1.6rem;
+    letter-spacing: 2.7px;
+  }
+
+  .nav_icon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 2.7rem;
+    left: 5.9rem;
+  }
+
+  .bold {
+    display: unset;
+  }
+
+  .number {
+    letter-spacing: 2.7px;
+    padding-right: 1.6rem;
+  }
+
+  .hamburger_menu {
+    display: block;
+  }
+
+  .menu_overlay {
+    right: -60%;
+  }
+
+  .cancel_icon {
+    display: block;
+  }
+}

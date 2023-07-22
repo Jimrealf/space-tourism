@@ -61,7 +61,31 @@
           </ul>
         </div>
       </nav>
-      <div>
+      <div class="hamburger_menu" id="hamburgerMenu">
+        <img src="../assets/shared/icon-hamburger.svg" alt="Menu" />
+      </div>
+      <div class="menu_overlay" id="menuOverlay">
+        <ul class="navigation mobile">
+          <li>
+            <a href="../index.html"> <span class="bold">00</span> Home </a>
+          </li>
+          <li>
+            <a href="../destination/destination.html">
+              <span class="bold">01</span> Destination
+            </a>
+          </li>
+          <li>
+            <a href="../crew/crew.html"> <span class="bold">02</span> Crew </a>
+          </li>
+          <li>
+            <a href="#"> <span class="bold">03</span> Technology </a>
+          </li>
+        </ul>
+        <div class="cancel_icon" id="cancelIcon">
+          <img src="../assets/shared/icon-close.svg" alt="Cancel Icon" />
+        </div>
+      </div>
+      <div class="tech">
         <div class="technology">
           <div class="technology_body">
             <div class="technology_title">
@@ -92,6 +116,7 @@
         </div>
       </div>
     </section>
+    <script type="module" src="../script.js"></script>
     <script type="module" src="./technology.js"></script>
   </body>
 </html>

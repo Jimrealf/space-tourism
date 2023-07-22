@@ -1,5 +1,4 @@
 // Function to update the page content based on the selected technology
-
 function updateTechnologyContent(technology) {
   document.getElementById("technologyName").textContent = technology.name;
   document.getElementById("technologyDescription").textContent =
@@ -7,7 +6,11 @@ function updateTechnologyContent(technology) {
 
   // Update the image
   const technologyImage = document.getElementById("technologyImage");
-  technologyImage.src = technology.images.portrait;
+  if (window.innerWidth <= 1024) {
+    technologyImage.src = technology.images.landscape;
+  } else {
+    technologyImage.src = technology.images.portrait;
+  }
   technologyImage.alt = "Image of " + technology.name;
 }
 
@@ -57,4 +60,16 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch((error) => {
       console.error("Error fetching data:", error);
     });
+});
+
+// Event listener for window resize to handle responsive image updates
+window.addEventListener("resize", () => {
+  // Get the current selected technology index
+  const currentTechnologyIndex = Array.from(
+    document.querySelectorAll(".technology_nav a")
+  ).findIndex((link) => link.classList.contains("current_technology"));
+  // Get the corresponding technology object from the data
+  const currentTechnology = technologyData[currentTechnologyIndex];
+  // Update the content with the appropriate image source
+  updateTechnologyContent(currentTechnology);
 });

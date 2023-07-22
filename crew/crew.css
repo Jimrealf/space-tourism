@@ -76,3 +76,124 @@
 .crew_navigations li a span {
   padding-right: 1.5rem;
 }
+
+@media (max-width: 1024px) {
+  .background_crew {
+    background-image: url("../assets/crew/background-crew-tablet.jpg");
+  }
+
+  .crew {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4.6rem;
+  }
+
+  .crew_rank,
+  .crew_name,
+  .crew_txt,
+  .crew_nav,
+  .crew_image {
+    align-self: center;
+  }
+
+  .crew_text {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 9rem;
+  }
+
+  .crew_navigations {
+    position: unset;
+    margin-top: 4rem;
+  }
+
+  .crew_title {
+    margin-bottom: 6rem;
+  }
+
+  .crew_rank {
+    font-size: 2.4rem;
+  }
+
+  .crew_name {
+    font-size: 4rem;
+  }
+
+  .crew_txt {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    width: 80%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .background_crew {
+    background-image: url("../assets/crew/background-crew-mobile.jpg");
+  }
+
+  .crew {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 4.6rem;
+  }
+
+  .crew_title {
+    position: absolute;
+    top: 14rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .crew_text {
+    position: unset;
+    align-self: center;
+    max-width: 327px;
+    border-top: 1px solid #383b4b;
+  }
+
+  .crew_image {
+    margin-top: 5.2rem;
+    position: relative;
+  }
+
+  #crewImage {
+    width: 177.123px;
+    height: 222px;
+  }
+
+  .crew_nav {
+    order: -1;
+    margin-bottom: 3.2rem;
+  }
+
+  .crew_navigations {
+    width: 8.8rem;
+    margin-top: 3.3rem;
+  }
+
+  .crew_navigations li {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .crew_navigations li a span {
+    padding-right: 1rem;
+  }
+
+  .crew_rank {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .crew_name {
+    font-size: 2.4rem;
+  }
+
+  .crew_txt {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    width: 327px;
+    margin-bottom: 10.4rem;
+  }
+}
