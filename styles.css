@@ -125,7 +125,7 @@ hr {
 .hamburger_menu {
   display: none;
   position: absolute;
-  right: 5.9rem;
+  right: 5%;
   top: 3.7rem;
   cursor: pointer;
 }
@@ -155,7 +155,7 @@ hr {
   display: none;
   position: absolute;
   top: 3.7rem;
-  right: 5.9rem;
+  right: 5%;
   cursor: pointer;
 }
 
@@ -231,7 +231,7 @@ hr {
     height: 40px;
     position: absolute;
     top: 2.7rem;
-    left: 5.9rem;
+    left: 5%;
   }
 
   .bold {

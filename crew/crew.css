@@ -193,7 +193,8 @@
   .crew_txt {
     font-size: 1.5rem;
     line-height: 2.5rem;
-    width: 327px;
     margin-bottom: 10.4rem;
+    max-width: 32.7rem;
+    align-self: center;
   }
 }

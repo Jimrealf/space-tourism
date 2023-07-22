@@ -119,6 +119,8 @@ main {
     font-size: 1.5rem;
     line-height: 2.5rem;
     padding-bottom: 8.1rem;
+    max-width: 32.7rem;
+    align-self: center;
   }
 
   .explore {
