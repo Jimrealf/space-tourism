@@ -215,5 +215,7 @@
     font-size: 1.5rem;
     line-height: 2.5rem;
     margin-bottom: 5.633rem;
+    max-width: 32.7rem;
+    align-self: center;
   }
 }
